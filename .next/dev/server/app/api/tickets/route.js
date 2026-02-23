@@ -1,0 +1,10 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/tickets/route.js")
+R.c("server/chunks/[root-of-the-server]__2f004bb6._.js")
+R.c("server/chunks/node_modules_next_fe8c50ee._.js")
+R.c("server/chunks/node_modules_es-toolkit_dist_ec07bcba._.js")
+R.c("server/chunks/node_modules_google-auth-library_3bf37d50._.js")
+R.c("server/chunks/node_modules_26ba10f8._.js")
+R.c("server/chunks/[root-of-the-server]__08ae4cf2._.js")
+R.c("server/chunks/_next-internal_server_app_api_tickets_route_actions_8c268133.js")
+R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/tickets/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/tickets/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports
