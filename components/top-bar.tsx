@@ -7,13 +7,14 @@ interface TopBarProps {
   subtitle?: string
   currentUser: string
   notificationCount?: number
+  isSidebarExpanded?: boolean
 }
 
-export function TopBar({ title, subtitle, currentUser, notificationCount = 0 }: TopBarProps) {
+export function TopBar({ title, subtitle, currentUser, notificationCount = 0, isSidebarExpanded = true }: TopBarProps) {
   const [showNotifications, setShowNotifications] = useState(false)
 
   return (
-    <div className="fixed top-0 right-0 left-64 h-16 bg-background border-b border-border flex items-center justify-between px-6 z-30">
+    <div className={`fixed top-0 right-0 h-16 bg-background border-b border-border flex items-center justify-between px-6 z-30 transition-all duration-300 ${isSidebarExpanded ? "left-64" : "left-20"}`}>
       <div>
         <h1 className="text-lg font-bold text-foreground">{title}</h1>
         {subtitle && <p className="text-xs text-muted-foreground">{subtitle}</p>}
