@@ -7,6 +7,7 @@ import { AnalystDashboard } from "@/components/analyst-dashboard"
 import { SidebarNav } from "@/components/sidebar-nav"
 import { TopBar } from "@/components/top-bar"
 import { PanelCanvas } from "@/components/panel-canvas"
+import { GeneralDataDashboard } from "@/components/general-data-dashboard"
 
 // ─── Metadatos de cada panel ─────────────────────────────────────────────────
 
@@ -19,7 +20,7 @@ interface PanelMeta {
   tags?: string[]
   area: Area
   /** Si tiene componente propio, se renderiza en lugar del PanelCanvas */
-  component?: "AnalystDashboard" | "RequesterDashboard"
+  component?: "AnalystDashboard" | "RequesterDashboard" | "GeneralDataDashboard"
 }
 
 const PANEL_REGISTRY: Record<string, PanelMeta> = {
@@ -29,7 +30,7 @@ const PANEL_REGISTRY: Record<string, PanelMeta> = {
     subtitle: "KPIs de criticidad · Proyectos priorizados · Vista macro",
     icon: "🗂️",
     area: "Data",
-    component: "AnalystDashboard",
+    component: "GeneralDataDashboard",
   },
   "Business Intelligence": {
     title: "Business Intelligence",
@@ -66,12 +67,12 @@ const PANEL_REGISTRY: Record<string, PanelMeta> = {
     area: "Data",
     tags: ["Capacidad", "Horas/Mes", "Analistas", "Carga laboral"],
   },
-  "Tickets de Operación": {
-    title: "Tickets de Operación",
+  "Tickets de Atención": {
+    title: "Tickets de Atención",
     subtitle: "Detalle de tareas · Seguimiento diario · Operación continua",
     icon: "🎫",
     area: "Data",
-    component: "RequesterDashboard",
+    component: "AnalystDashboard",
   },
 
   // ── DATA · SOLICITANTE ────────────────────────────────────────────────────
@@ -180,6 +181,7 @@ export default function Home() {
   const renderPanel = () => {
     if (!panel) return null
     if (panel.component === "AnalystDashboard") return <AnalystDashboard />
+    if (panel.component === "GeneralDataDashboard") return <GeneralDataDashboard />
     if (panel.component === "RequesterDashboard")
       return <RequesterDashboard userName={currentUser} />
     return (

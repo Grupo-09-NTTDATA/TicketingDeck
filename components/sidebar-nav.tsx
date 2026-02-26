@@ -79,7 +79,7 @@ const NAV_DATA_ANALYST: NavGroup[] = [
   {
     groupLabel: "Operación",
     items: [
-      { icon: "🎫", label: "Tickets de Operación", sublabel: "Tareas · Seguimiento diario", href: "#" },
+      { icon: "🎫", label: "Tickets de Atención", sublabel: "Tareas · Seguimiento diario", href: "#" },
     ],
   },
 ]
