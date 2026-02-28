@@ -35,27 +35,6 @@ interface SidebarNavProps {
 
 const NAV_DATA_ANALYST: NavGroup[] = [
   {
-    groupLabel: "General",
-    items: [
-      {
-        icon: "🗂️",
-        label: "General de Data",
-        sublabel: "KPIs · Proyectos prioritarios",
-        href: "#",
-        badge: "4",
-        badgeColor: "red",
-      },
-    ],
-  },
-  {
-    groupLabel: "Sub-áreas",
-    items: [
-      { icon: "📊", label: "Business Intelligence", sublabel: "Dashboards & reporting", href: "#" },
-      { icon: "🔧", label: "Data Engineering", sublabel: "Pipelines & arquitectura", href: "#" },
-      { icon: "🤖", label: "Data Science", sublabel: "Modelos & análisis", href: "#" },
-    ],
-  },
-  {
     groupLabel: "Proyectos",
     items: [
       {
@@ -66,13 +45,6 @@ const NAV_DATA_ANALYST: NavGroup[] = [
         badge: "2",
         badgeColor: "yellow",
         isAlert: true,
-      },
-      {
-        icon: "⏱️",
-        label: "Bolsa de Horas",
-        sublabel: "Capacidad mensual · Analistas",
-        href: "#",
-        analystOnly: true,
       },
     ],
   },
@@ -231,7 +203,7 @@ export function SidebarNav({
                   key={area}
                   onClick={() => {
                     onAreaChange(area)
-                    onItemChange(area === "Data" ? "General de Data" : "Portafolio de Proyectos")
+                    onItemChange(area === "Data" ? "Gestión de Proyectos" : "Portafolio de Proyectos")
                   }}
                   className={cn(
                     "flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-[11px] font-bold transition-all duration-200",
@@ -253,7 +225,7 @@ export function SidebarNav({
                 key={area}
                 onClick={() => {
                   onAreaChange(area)
-                  onItemChange(area === "Data" ? "General de Data" : "Portafolio de Proyectos")
+                  onItemChange(area === "Data" ? "Gestión de Proyectos" : "Portafolio de Proyectos")
                 }}
                 title={area}
                 className={cn(

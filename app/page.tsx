@@ -25,47 +25,13 @@ interface PanelMeta {
 
 const PANEL_REGISTRY: Record<string, PanelMeta> = {
   // ── DATA · ANALISTA ────────────────────────────────────────────────────────
-  "General de Data": {
-    title: "General de Data",
-    subtitle: "KPIs de criticidad · Proyectos priorizados · Vista macro",
-    icon: "🗂️",
-    area: "Data",
-    component: "GeneralDataDashboard",
-  },
-  "Business Intelligence": {
-    title: "Business Intelligence",
-    subtitle: "Dashboards de reporting · Visualizaciones · KPIs de negocio",
-    icon: "📊",
-    area: "Data",
-    tags: ["Power BI", "Tableau", "Reporting"],
-  },
-  "Data Engineering": {
-    title: "Data Engineering",
-    subtitle: "Pipelines de datos · Arquitectura · ETL/ELT",
-    icon: "🔧",
-    area: "Data",
-    tags: ["Pipelines", "ETL", "Arquitectura", "Airflow"],
-  },
-  "Data Science": {
-    title: "Data Science",
-    subtitle: "Modelos predictivos · Análisis estadístico · MLOps",
-    icon: "🤖",
-    area: "Data",
-    tags: ["ML Models", "Python", "Estadística", "MLOps"],
-  },
   "Gestión de Proyectos": {
     title: "Gestión de Proyectos",
     subtitle: "Alcance · Tiempo · Presupuesto (Horas) · Avance · Desviaciones",
     icon: "🗓️",
     area: "Data",
     tags: ["Alcance", "Tiempo", "Presupuesto", "Desviaciones"],
-  },
-  "Bolsa de Horas": {
-    title: "Bolsa de Horas",
-    subtitle: "Análisis de capacidad mensual · Carga laboral de analistas · Katy",
-    icon: "⏱️",
-    area: "Data",
-    tags: ["Capacidad", "Horas/Mes", "Analistas", "Carga laboral"],
+    component: "GeneralDataDashboard",
   },
   "Tickets de Atención": {
     title: "Tickets de Atención",
@@ -151,17 +117,17 @@ export default function Home() {
   const [currentUser, setCurrentUser] = useState<string | null>(null)
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(true)
   const [selectedArea, setSelectedArea] = useState<Area>("Data")
-  const [activeItem, setActiveItem] = useState("General de Data")
+  const [activeItem, setActiveItem] = useState("Gestión de Proyectos")
 
   const handleLogin = (role: string) => {
     setCurrentUser(role)
-    setActiveItem(role === "Analista" ? "General de Data" : "Mi Dashboard")
+    setActiveItem(role === "Analista" ? "Gestión de Proyectos" : "Mi Dashboard")
   }
 
   const handleLogout = () => {
     setCurrentUser(null)
     setSelectedArea("Data")
-    setActiveItem("General de Data")
+    setActiveItem("Gestión de Proyectos")
   }
 
   const handleAreaChange = (area: Area) => {
