@@ -15,7 +15,7 @@ export function RequesterDashboard({ userName }: { userName: string }) {
   // Obtenemos tickets y loading del hook
   const { tickets, addTicket, loading } = useTickets()
 
-  // Mapeo oficial de áreas para Soltrak
+  // Mapeo oficial de áreas para GRUPO 9
   const AREA_MAP: Record<string, string> = {
     "mejora.continua@soltrak.com.pe": "Mejora Continua",
     "logistica@soltrak.com.pe": "Logística",

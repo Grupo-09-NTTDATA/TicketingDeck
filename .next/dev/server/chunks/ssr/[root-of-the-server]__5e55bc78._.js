@@ -70,7 +70,7 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 ;
 ;
 const metadata = {
-    title: "SOLTRAK - Sistema de Gestión de Requerimientos",
+    title: "GRUPO 9 - Data Analytics Ticketing System",
     description: "Sistema de gestión de requerimientos de data analytics",
     generator: "v0.app",
     icons: {

@@ -195,7 +195,7 @@ export function SidebarNav({
           </div>
           {isExpanded && (
             <div className="flex flex-col">
-              <span className="text-[13px] font-bold text-white tracking-tight">SOLTRAK</span>
+              <span className="text-[13px] font-bold text-white tracking-tight">GRUPO 9</span>
               <span className="text-[10px] text-white/40 font-medium uppercase tracking-widest leading-tight">
                 Management
               </span>

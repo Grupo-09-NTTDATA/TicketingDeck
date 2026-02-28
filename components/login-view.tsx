@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
-// Mapeo de cuentas autorizadas para el piloto Soltrak 2026
+// Mapeo de cuentas autorizadas para el piloto GRUPO 9 2026
 const AUTHORIZED_USERS: Record<string, string> = {
   "mejora.continua@soltrak.com.pe": "Mejora Continua",
   "logistica@soltrak.com.pe": "Logística",
@@ -58,12 +58,12 @@ export function LoginView({ onLogin }: LoginViewProps) {
         "w-full max-w-6xl mb-12 flex items-center gap-4 transition-all duration-500",
         isAnimating && "opacity-0 -translate-y-4"
       )}>
-        <div className="w-14 h-14 bg-[#b31942] rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md">
-          S
+        <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/30">
+          ⬤
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 leading-none">SOLTRAK</h1>
-          <p className="text-sm font-medium text-slate-500 uppercase tracking-widest mt-1">Data Analytics</p>
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 leading-none">GRUPO 9</h1>
+          <h3 className="text-1x font-bold tracking-tight text-slate-500 leading-none">Reto 1</h3>
         </div>
       </div>
 
@@ -80,7 +80,7 @@ export function LoginView({ onLogin }: LoginViewProps) {
               Gestión Inteligente de Requerimientos
             </h2>
             <p className="text-lg text-slate-600">
-              Trazabilidad completa para las áreas core de Soltrak.
+              Trazabilidad completa para las áreas core de GRUPO 9.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export function LoginView({ onLogin }: LoginViewProps) {
               <div className="space-y-2">
                 <Input
                   type="email"
-                  placeholder="usuario@soltrak.com.pe"
+                  placeholder="usuario@grupo9.com.pe"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className={cn(
@@ -143,7 +143,7 @@ export function LoginView({ onLogin }: LoginViewProps) {
                     Ingresar al Sistema
                   </span>
                   <span className="text-xs opacity-70 font-medium tracking-wide">
-                    Módulo de Piloto — Soltrak 2026
+                    Módulo de Piloto — GRUPO 9 2026
                   </span>
                 </div>
               </Button>

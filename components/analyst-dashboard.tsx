@@ -55,7 +55,7 @@ export function AnalystDashboard() {
         <div>
           <h2 className="text-3xl font-bold text-slate-900 tracking-tight">Centro de Control</h2>
           <p className="text-muted-foreground mt-1 font-medium">
-            Gestión global de requerimientos de análisis de Soltrak
+            Gestión global de requerimientos de análisis de GRUPO 9
           </p>
         </div>
       </div>

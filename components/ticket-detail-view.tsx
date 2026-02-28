@@ -39,7 +39,7 @@ const priorityColors: Record<string, string> = {
   alta: "bg-red-50 text-red-700 border-red-200",
 }
 
-// El equipo real de Data Analytics Soltrak
+// El equipo real de Data Analytics GRUPO 9
 const ANALYST_TEAM = [
   "Leonardo", "Mauricio", "Martin Vargas", "Carlos Santoyo", 
   "Jean Zevallos", "Alejandro Zarate", "Leo Soto", "Julio Egocheaga", "Sebastian Galvez"
@@ -323,7 +323,7 @@ export function TicketDetailView({
       <Card className="border-slate-200 shadow-sm mt-8">
         <CardHeader className="pb-3">
           <CardTitle className="text-lg text-slate-800">Historial y Auditoría</CardTitle>
-          <CardDescription>Registro inmutable de todas las modificaciones (Trazabilidad Soltrak)</CardDescription>
+          <CardDescription>Registro inmutable de todas las modificaciones (Trazabilidad GRUPO 9)</CardDescription>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="timeline" className="w-full">

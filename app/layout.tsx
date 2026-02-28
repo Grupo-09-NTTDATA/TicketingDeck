@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SOLTRAK - Sistema de Gestión de Requerimientos",
+  title: "GRUPO 9 - Data Analytics Ticketing System",
   description: "Sistema de gestión de requerimientos de data analytics",
   generator: "v0.app",
   icons: {
